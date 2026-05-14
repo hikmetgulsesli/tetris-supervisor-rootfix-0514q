@@ -1,0 +1,332 @@
+[
+  {
+    "screenId": "4ba9a99c3476453f84bddf57a0bcddd4",
+    "screenTitle": "Game Over",
+    "deviceType": "DESKTOP",
+    "elements": [
+      {
+        "type": "button",
+        "label": "replay",
+        "line": 152
+      },
+      {
+        "type": "button",
+        "label": "MAIN MENU",
+        "line": 158
+      },
+      {
+        "type": "button",
+        "label": "SCORE",
+        "line": 162
+      }
+    ],
+    "navigation": [],
+    "buttons": [
+      {
+        "type": "button",
+        "label": "replay",
+        "line": 152
+      },
+      {
+        "type": "button",
+        "label": "MAIN MENU",
+        "line": 158
+      },
+      {
+        "type": "button",
+        "label": "SCORE",
+        "line": 162
+      }
+    ],
+    "inputs": [],
+    "hardcodedData": [],
+    "totalInteractive": 3,
+    "requiresRouter": false,
+    "requiresDragDrop": false
+  },
+  {
+    "screenId": "f1242e8090b0487184d9cd6a66293852",
+    "screenTitle": "Pause Overlay",
+    "deviceType": "DESKTOP",
+    "elements": [
+      {
+        "type": "button",
+        "label": "RESUME",
+        "line": 210
+      },
+      {
+        "type": "button",
+        "label": "RESTART",
+        "line": 215
+      },
+      {
+        "type": "button",
+        "label": "QUIT TO MENU",
+        "line": 220
+      }
+    ],
+    "navigation": [],
+    "buttons": [
+      {
+        "type": "button",
+        "label": "RESUME",
+        "line": 210
+      },
+      {
+        "type": "button",
+        "label": "RESTART",
+        "line": 215
+      },
+      {
+        "type": "button",
+        "label": "QUIT TO MENU",
+        "line": 220
+      }
+    ],
+    "inputs": [],
+    "hardcodedData": [],
+    "totalInteractive": 3,
+    "requiresRouter": false,
+    "requiresDragDrop": false
+  },
+  {
+    "screenId": "3ac7f804b8564e0f91f179c014d941a4",
+    "screenTitle": "Game Board",
+    "deviceType": "DESKTOP",
+    "elements": [
+      {
+        "type": "link",
+        "label": "Play",
+        "href": "#",
+        "line": 163
+      },
+      {
+        "type": "link",
+        "label": "leaderboard",
+        "href": "#",
+        "line": 167
+      },
+      {
+        "type": "link",
+        "label": "Training",
+        "href": "#",
+        "line": 171
+      },
+      {
+        "type": "link",
+        "label": "Stats",
+        "href": "#",
+        "line": 175
+      },
+      {
+        "type": "link",
+        "label": "Privacy",
+        "href": "#",
+        "line": 297
+      },
+      {
+        "type": "link",
+        "label": "Terms",
+        "href": "#",
+        "line": 298
+      },
+      {
+        "type": "link",
+        "label": "Source",
+        "href": "#",
+        "line": 299
+      },
+      {
+        "type": "button",
+        "label": "settings",
+        "line": 185
+      },
+      {
+        "type": "button",
+        "label": "help",
+        "line": 188
+      },
+      {
+        "type": "button",
+        "label": "pause",
+        "line": 272
+      },
+      {
+        "type": "button",
+        "label": "RESTART",
+        "line": 275
+      }
+    ],
+    "navigation": [
+      {
+        "type": "link",
+        "label": "Play",
+        "href": "#",
+        "line": 163
+      },
+      {
+        "type": "link",
+        "label": "leaderboard",
+        "href": "#",
+        "line": 167
+      },
+      {
+        "type": "link",
+        "label": "Training",
+        "href": "#",
+        "line": 171
+      },
+      {
+        "type": "link",
+        "label": "Stats",
+        "href": "#",
+        "line": 175
+      },
+      {
+        "type": "link",
+        "label": "Privacy",
+        "href": "#",
+        "line": 297
+      },
+      {
+        "type": "link",
+        "label": "Terms",
+        "href": "#",
+        "line": 298
+      },
+      {
+        "type": "link",
+        "label": "Source",
+        "href": "#",
+        "line": 299
+      }
+    ],
+    "buttons": [
+      {
+        "type": "button",
+        "label": "settings",
+        "line": 185
+      },
+      {
+        "type": "button",
+        "label": "help",
+        "line": 188
+      },
+      {
+        "type": "button",
+        "label": "pause",
+        "line": 272
+      },
+      {
+        "type": "button",
+        "label": "RESTART",
+        "line": 275
+      }
+    ],
+    "inputs": [],
+    "hardcodedData": [],
+    "totalInteractive": 11,
+    "requiresRouter": false,
+    "requiresDragDrop": false
+  },
+  {
+    "screenId": "a3f1feaf560d4da0a1bca404f7741b5c",
+    "screenTitle": "Main Menu",
+    "deviceType": "DESKTOP",
+    "elements": [
+      {
+        "type": "button",
+        "label": "START NEW GAME",
+        "line": 126
+      },
+      {
+        "type": "button",
+        "label": "RESUME NO ACTIVE GAME",
+        "line": 131
+      },
+      {
+        "type": "button",
+        "label": "RESTART",
+        "line": 135
+      },
+      {
+        "type": "button",
+        "label": "CONTROLS",
+        "line": 139
+      },
+      {
+        "type": "button",
+        "label": "STATS",
+        "line": 143
+      }
+    ],
+    "navigation": [],
+    "buttons": [
+      {
+        "type": "button",
+        "label": "START NEW GAME",
+        "line": 126
+      },
+      {
+        "type": "button",
+        "label": "RESUME NO ACTIVE GAME",
+        "line": 131
+      },
+      {
+        "type": "button",
+        "label": "RESTART",
+        "line": 135
+      },
+      {
+        "type": "button",
+        "label": "CONTROLS",
+        "line": 139
+      },
+      {
+        "type": "button",
+        "label": "STATS",
+        "line": 143
+      }
+    ],
+    "inputs": [],
+    "hardcodedData": [],
+    "totalInteractive": 5,
+    "requiresRouter": false,
+    "requiresDragDrop": false
+  },
+  {
+    "screenId": "bf03f19abb804718bb05d52a83ba7c04",
+    "screenTitle": "Controls Help",
+    "deviceType": "DESKTOP",
+    "elements": [
+      {
+        "type": "button",
+        "label": "Close",
+        "line": 129
+      },
+      {
+        "type": "button",
+        "label": "RESUME SESSION",
+        "line": 272
+      }
+    ],
+    "navigation": [],
+    "buttons": [
+      {
+        "type": "button",
+        "label": "Close",
+        "line": 129
+      },
+      {
+        "type": "button",
+        "label": "RESUME SESSION",
+        "line": 272
+      }
+    ],
+    "inputs": [],
+    "hardcodedData": [],
+    "totalInteractive": 2,
+    "requiresRouter": false,
+    "requiresDragDrop": false
+  }
+]
