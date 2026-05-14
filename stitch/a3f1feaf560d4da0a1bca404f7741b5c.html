@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TETRA-FLOW - Main Menu</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&amp;family=Geist:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline": "#87929a",
+                        "on-surface": "#dee3e8",
+                        "secondary-fixed-dim": "#d0bcff",
+                        "secondary-fixed": "#e9ddff",
+                        "on-primary-fixed": "#001e2c",
+                        "on-background": "#dee3e8",
+                        "inverse-on-surface": "#2c3135",
+                        "on-secondary-container": "#c4abff",
+                        "inverse-surface": "#dee3e8",
+                        "surface-container": "#1b2024",
+                        "on-primary-container": "#004965",
+                        "on-secondary-fixed": "#23005c",
+                        "on-tertiary": "#472a00",
+                        "surface-tint": "#7bd0ff",
+                        "error": "#ffb4ab",
+                        "surface-container-lowest": "#0a0f12",
+                        "on-tertiary-fixed-variant": "#653e00",
+                        "surface-dim": "#0f1418",
+                        "primary": "#8ed5ff",
+                        "surface-container-highest": "#303539",
+                        "secondary-container": "#571bc1",
+                        "primary-fixed": "#c4e7ff",
+                        "surface-container-high": "#252b2e",
+                        "on-surface-variant": "#bdc8d1",
+                        "on-tertiary-fixed": "#2a1700",
+                        "surface-bright": "#343a3e",
+                        "on-error": "#690005",
+                        "error-container": "#93000a",
+                        "on-primary-fixed-variant": "#004c69",
+                        "inverse-primary": "#00668a",
+                        "surface-container-low": "#171c20",
+                        "outline-variant": "#3e484f",
+                        "primary-container": "#38bdf8",
+                        "on-tertiary-container": "#613b00",
+                        "on-primary": "#00354a",
+                        "secondary": "#d0bcff",
+                        "tertiary-fixed-dim": "#ffb960",
+                        "on-secondary": "#3c0091",
+                        "tertiary": "#ffc176",
+                        "surface-variant": "#303539",
+                        "surface": "#0f1418",
+                        "tertiary-container": "#f1a02b",
+                        "on-secondary-fixed-variant": "#5516be",
+                        "on-error-container": "#ffdad6",
+                        "tertiary-fixed": "#ffddb8",
+                        "background": "#0f1418",
+                        "primary-fixed-dim": "#7bd0ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "xl": "64px",
+                        "md": "24px",
+                        "board-gutter": "2px",
+                        "lg": "40px",
+                        "sm": "16px",
+                        "xs": "8px",
+                        "base": "4px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Space Grotesk"],
+                        "body-lg": ["Geist"],
+                        "stat-value": ["Geist"],
+                        "body-sm": ["Geist"],
+                        "display-lg": ["Space Grotesk"],
+                        "label-caps": ["Geist"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["32px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "stat-value": ["24px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "700" }],
+                        "body-sm": ["14px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "display-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-caps": ["12px", { "lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .grid-bg {
+            background-image: 
+                linear-gradient(to right, #1E293B 1px, transparent 1px),
+                linear-gradient(to bottom, #1E293B 1px, transparent 1px);
+            background-size: 32px 32px;
+            opacity: 0.1;
+        }
+        .btn-glow:hover {
+            box-shadow: 0 0 8px 0px rgba(56, 189, 248, 0.4);
+        }
+    </style>
+</head>
+<body class="bg-[#0F172A] text-on-surface min-h-screen flex flex-col items-center justify-center relative overflow-hidden">
+<!-- Background Grid -->
+<div class="absolute inset-0 grid-bg z-0 pointer-events-none"></div>
+<!-- Main Container -->
+<main class="z-10 flex flex-col items-center w-full max-w-[600px] px-md">
+<!-- Header Section -->
+<div class="text-center mb-xl">
+<h2 class="font-label-caps text-label-caps text-primary tracking-widest mb-xs">SUPERVISOR ROOT FIX 0514q</h2>
+<h1 class="font-display-lg text-display-lg text-on-surface tracking-tighter shadow-sm mb-sm drop-shadow-[0_0_15px_rgba(56,189,248,0.3)]">TETRA-FLOW</h1>
+<div class="h-[1px] w-full bg-outline-variant max-w-[200px] mx-auto opacity-50"></div>
+</div>
+<!-- Menu Options -->
+<div class="w-full bg-[#111827] border border-[#334155] rounded-DEFAULT p-md flex flex-col gap-sm shadow-lg">
+<button class="w-full group relative flex items-center justify-between bg-[#0F172A] border border-[#334155] hover:border-primary px-md py-sm rounded-DEFAULT transition-all duration-200 btn-glow focus:outline-none focus:ring-1 focus:ring-primary">
+<span class="font-stat-value text-stat-value text-on-surface group-hover:text-primary transition-colors">START NEW GAME</span>
+<span class="material-symbols-outlined text-primary opacity-0 group-hover:opacity-100 transition-opacity">play_arrow</span>
+</button>
+<!-- Disabled State -->
+<button class="w-full relative flex items-center justify-between bg-[#0F172A] border border-[#334155] px-md py-sm rounded-DEFAULT opacity-50 cursor-not-allowed" disabled="">
+<span class="font-stat-value text-stat-value text-outline-variant">RESUME</span>
+<span class="font-label-caps text-label-caps text-outline-variant border border-outline-variant px-2 py-1 rounded">NO ACTIVE GAME</span>
+</button>
+<button class="w-full group relative flex items-center justify-between bg-[#0F172A] border border-[#334155] hover:border-primary px-md py-sm rounded-DEFAULT transition-all duration-200 btn-glow focus:outline-none focus:ring-1 focus:ring-primary">
+<span class="font-stat-value text-stat-value text-on-surface group-hover:text-primary transition-colors">RESTART</span>
+<span class="material-symbols-outlined text-primary opacity-0 group-hover:opacity-100 transition-opacity">replay</span>
+</button>
+<button class="w-full group relative flex items-center justify-between bg-[#0F172A] border border-[#334155] hover:border-primary px-md py-sm rounded-DEFAULT transition-all duration-200 btn-glow focus:outline-none focus:ring-1 focus:ring-primary mt-sm">
+<span class="font-body-lg text-body-lg text-on-surface-variant group-hover:text-primary transition-colors uppercase tracking-wider">CONTROLS</span>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors">gamepad</span>
+</button>
+<button class="w-full group relative flex items-center justify-between bg-[#0F172A] border border-[#334155] hover:border-primary px-md py-sm rounded-DEFAULT transition-all duration-200 btn-glow focus:outline-none focus:ring-1 focus:ring-primary">
+<span class="font-body-lg text-body-lg text-on-surface-variant group-hover:text-primary transition-colors uppercase tracking-wider">STATS</span>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors">bar_chart</span>
+</button>
+</div>
+</main>
+<!-- Version Metadata Footer -->
+<footer class="absolute bottom-md left-0 w-full px-lg flex justify-between items-end z-10 pointer-events-none">
+<div class="flex flex-col gap-base">
+<span class="font-label-caps text-label-caps text-outline opacity-50">SYS.VER: 1.0.4.992</span>
+<span class="font-label-caps text-label-caps text-outline opacity-50">ENV: PROD-SEC-B</span>
+</div>
+<div class="flex items-center gap-xs text-primary opacity-70">
+<span class="material-symbols-outlined text-[16px]">wifi</span>
+<span class="font-label-caps text-label-caps">ONLINE</span>
+</div>
+</footer>
+</body></html>

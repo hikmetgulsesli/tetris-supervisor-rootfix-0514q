@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TETRA-FLOW - Controls</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&amp;family=Geist:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline": "#87929a",
+                        "on-surface": "#dee3e8",
+                        "secondary-fixed-dim": "#d0bcff",
+                        "secondary-fixed": "#e9ddff",
+                        "on-primary-fixed": "#001e2c",
+                        "on-background": "#dee3e8",
+                        "inverse-on-surface": "#2c3135",
+                        "on-secondary-container": "#c4abff",
+                        "inverse-surface": "#dee3e8",
+                        "surface-container": "#1b2024",
+                        "on-primary-container": "#004965",
+                        "on-secondary-fixed": "#23005c",
+                        "on-tertiary": "#472a00",
+                        "surface-tint": "#7bd0ff",
+                        "error": "#ffb4ab",
+                        "surface-container-lowest": "#0a0f12",
+                        "on-tertiary-fixed-variant": "#653e00",
+                        "surface-dim": "#0f1418",
+                        "primary": "#8ed5ff",
+                        "surface-container-highest": "#303539",
+                        "secondary-container": "#571bc1",
+                        "primary-fixed": "#c4e7ff",
+                        "surface-container-high": "#252b2e",
+                        "on-surface-variant": "#bdc8d1",
+                        "on-tertiary-fixed": "#2a1700",
+                        "surface-bright": "#343a3e",
+                        "on-error": "#690005",
+                        "error-container": "#93000a",
+                        "on-primary-fixed-variant": "#004c69",
+                        "inverse-primary": "#00668a",
+                        "surface-container-low": "#171c20",
+                        "outline-variant": "#3e484f",
+                        "primary-container": "#38bdf8",
+                        "on-tertiary-container": "#613b00",
+                        "on-primary": "#00354a",
+                        "secondary": "#d0bcff",
+                        "tertiary-fixed-dim": "#ffb960",
+                        "on-secondary": "#3c0091",
+                        "tertiary": "#ffc176",
+                        "surface-variant": "#303539",
+                        "surface": "#0f1418",
+                        "tertiary-container": "#f1a02b",
+                        "on-secondary-fixed-variant": "#5516be",
+                        "on-error-container": "#ffdad6",
+                        "tertiary-fixed": "#ffddb8",
+                        "background": "#0f1418",
+                        "primary-fixed-dim": "#7bd0ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "xl": "64px",
+                        "md": "24px",
+                        "board-gutter": "2px",
+                        "lg": "40px",
+                        "sm": "16px",
+                        "xs": "8px",
+                        "base": "4px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Space Grotesk"],
+                        "body-lg": ["Geist"],
+                        "stat-value": ["Geist"],
+                        "body-sm": ["Geist"],
+                        "display-lg": ["Space Grotesk"],
+                        "label-caps": ["Geist"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["32px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "stat-value": ["24px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "700" }],
+                        "body-sm": ["14px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "display-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-caps": ["12px", { "lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Custom scrollbar for technical look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0f1418; /* surface */
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #3e484f; /* outline-variant */
+            border-radius: 2px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #87929a; /* outline */
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex items-center justify-center p-md md:p-lg antialiased selection:bg-primary-container selection:text-on-primary-container">
+<!-- Modal Canvas (Level 2 Overlay logic, blurred backdrop implies full screen overlay) -->
+<main class="w-full max-w-5xl bg-surface border border-outline-variant rounded-xl flex flex-col shadow-2xl relative overflow-hidden">
+<!-- Header -->
+<header class="flex justify-between items-center px-lg py-md border-b border-outline-variant bg-surface-container-low">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-primary text-[32px]" data-icon="terminal">terminal</span>
+<h1 class="font-headline-md text-headline-md text-primary tracking-tighter uppercase">Operations Manual</h1>
+</div>
+<button aria-label="Close" class="text-on-surface-variant hover:text-primary transition-colors p-xs rounded focus:outline-none focus:ring-2 focus:ring-primary">
+<span class="material-symbols-outlined text-[28px]" data-icon="close">close</span>
+</button>
+</header>
+<!-- Content Area -->
+<div class="flex-1 overflow-y-auto p-lg">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-xl">
+<!-- Left Column: Inputs -->
+<section class="space-y-lg">
+<!-- Keyboard Section -->
+<div class="space-y-md">
+<h2 class="font-stat-value text-stat-value text-on-surface border-b border-outline-variant pb-xs flex items-center gap-xs">
+<span class="material-symbols-outlined text-outline" data-icon="keyboard">keyboard</span>
+                            HARDWARE INPUTS
+                        </h2>
+<div class="grid grid-cols-1 gap-sm">
+<!-- Key Mapping Row -->
+<div class="flex items-center justify-between p-sm bg-surface-container rounded border border-surface-container-highest hover:border-primary transition-colors group">
+<span class="font-body-lg text-body-lg text-on-surface-variant group-hover:text-on-surface">Rotate Piece</span>
+<div class="flex gap-xs">
+<kbd class="flex items-center justify-center w-10 h-10 bg-surface border border-outline-variant rounded font-label-caps text-label-caps text-primary shadow-[0_2px_0_#3e484f]">
+<span class="material-symbols-outlined" data-icon="arrow_upward">arrow_upward</span>
+</kbd>
+</div>
+</div>
+<div class="flex items-center justify-between p-sm bg-surface-container rounded border border-surface-container-highest hover:border-primary transition-colors group">
+<span class="font-body-lg text-body-lg text-on-surface-variant group-hover:text-on-surface">Soft Drop</span>
+<div class="flex gap-xs">
+<kbd class="flex items-center justify-center w-10 h-10 bg-surface border border-outline-variant rounded font-label-caps text-label-caps text-primary shadow-[0_2px_0_#3e484f]">
+<span class="material-symbols-outlined" data-icon="arrow_downward">arrow_downward</span>
+</kbd>
+</div>
+</div>
+<div class="flex items-center justify-between p-sm bg-surface-container rounded border border-surface-container-highest hover:border-primary transition-colors group">
+<span class="font-body-lg text-body-lg text-on-surface-variant group-hover:text-on-surface">Move Horizontal</span>
+<div class="flex gap-xs">
+<kbd class="flex items-center justify-center w-10 h-10 bg-surface border border-outline-variant rounded font-label-caps text-label-caps text-primary shadow-[0_2px_0_#3e484f]">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</kbd>
+<kbd class="flex items-center justify-center w-10 h-10 bg-surface border border-outline-variant rounded font-label-caps text-label-caps text-primary shadow-[0_2px_0_#3e484f]">
+<span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</kbd>
+</div>
+</div>
+<div class="flex items-center justify-between p-sm bg-surface-container rounded border border-surface-container-highest hover:border-primary transition-colors group">
+<span class="font-body-lg text-body-lg text-primary font-bold">Hard Drop</span>
+<div class="flex gap-xs">
+<kbd class="flex items-center justify-center h-10 px-md min-w-[80px] bg-surface border border-outline-variant rounded font-label-caps text-label-caps text-primary shadow-[0_2px_0_#3e484f]">
+                                        SPACE
+                                    </kbd>
+</div>
+</div>
+<div class="flex items-center justify-between p-sm bg-surface-container rounded border border-surface-container-highest hover:border-primary transition-colors group">
+<span class="font-body-lg text-body-lg text-on-surface-variant group-hover:text-on-surface">Pause Session</span>
+<div class="flex gap-xs">
+<kbd class="flex items-center justify-center w-10 h-10 bg-surface border border-outline-variant rounded font-label-caps text-label-caps text-primary shadow-[0_2px_0_#3e484f]">
+                                        P
+                                    </kbd>
+</div>
+</div>
+</div>
+</div>
+<!-- Touch Section -->
+<div class="space-y-md pt-md">
+<h2 class="font-stat-value text-stat-value text-on-surface border-b border-outline-variant pb-xs flex items-center gap-xs">
+<span class="material-symbols-outlined text-outline" data-icon="touch_app">touch_app</span>
+                            HAPTIC GESTURES
+                        </h2>
+<div class="grid grid-cols-2 gap-sm">
+<div class="bg-surface-container p-sm rounded border border-surface-container-highest flex flex-col gap-xs">
+<span class="material-symbols-outlined text-primary" data-icon="swipe_left">swipe_left</span>
+<span class="font-label-caps text-label-caps text-on-surface">Swipe L/R</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Move Tetromino</span>
+</div>
+<div class="bg-surface-container p-sm rounded border border-surface-container-highest flex flex-col gap-xs">
+<span class="material-symbols-outlined text-primary" data-icon="tap_and_play">tap_and_play</span>
+<span class="font-label-caps text-label-caps text-on-surface">Single Tap</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Rotate 90°</span>
+</div>
+<div class="bg-surface-container p-sm rounded border border-surface-container-highest flex flex-col gap-xs">
+<span class="material-symbols-outlined text-primary" data-icon="swipe_down">swipe_down</span>
+<span class="font-label-caps text-label-caps text-on-surface">Swipe Down</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Soft Drop</span>
+</div>
+<div class="bg-surface-container p-sm rounded border border-outline flex flex-col gap-xs relative overflow-hidden">
+<div class="absolute inset-0 bg-primary/5"></div>
+<span class="material-symbols-outlined text-primary relative z-10" data-icon="keyboard_double_arrow_down">keyboard_double_arrow_down</span>
+<span class="font-label-caps text-label-caps text-primary relative z-10">Flick Down</span>
+<span class="font-body-sm text-body-sm text-on-surface relative z-10">Hard Drop (Insta-lock)</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Right Column: Mechanics -->
+<section class="space-y-md">
+<h2 class="font-stat-value text-stat-value text-on-surface border-b border-outline-variant pb-xs flex items-center gap-xs">
+<span class="material-symbols-outlined text-outline" data-icon="rule">rule</span>
+                        CORE DIRECTIVES
+                    </h2>
+<div class="space-y-sm">
+<!-- Rule Card 1 -->
+<div class="bg-surface-container border-l-2 border-primary p-md rounded-r">
+<h3 class="font-label-caps text-label-caps text-primary mb-xs uppercase">Objective</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                                Manipulate falling geometric units (Tetrominoes) to form solid horizontal lines across the 10x20 matrix. Completed lines are cleared, yielding operational efficiency points.
+                            </p>
+</div>
+<!-- Rule Card 2 -->
+<div class="bg-surface-container border-l-2 border-outline-variant p-md rounded-r hover:border-primary transition-colors">
+<h3 class="font-label-caps text-label-caps text-on-surface mb-xs uppercase">Scoring Multipliers</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-xs">
+                                Concurrent line clearances yield exponential point values.
+                            </p>
+<ul class="font-label-caps text-label-caps text-outline grid grid-cols-2 gap-xs">
+<li>Single: 100 PTS</li>
+<li>Double: 300 PTS</li>
+<li>Triple: 500 PTS</li>
+<li class="text-primary font-bold">Tetra: 800 PTS</li>
+</ul>
+</div>
+<!-- Rule Card 3 -->
+<div class="bg-surface-container border-l-2 border-outline-variant p-md rounded-r hover:border-primary transition-colors">
+<h3 class="font-label-caps text-label-caps text-on-surface mb-xs uppercase">Velocity Escalation</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                                As clearance quotas are met, system level increases. Gravity velocity scales proportionally. Maintain structural integrity under elevated pressure.
+                            </p>
+</div>
+<!-- Alert Box -->
+<div class="bg-error-container/10 border border-error/30 p-sm rounded mt-md flex gap-sm items-start">
+<span class="material-symbols-outlined text-error" data-icon="warning">warning</span>
+<div>
+<h4 class="font-label-caps text-label-caps text-error mb-1">Critical Failure State</h4>
+<p class="font-body-sm text-body-sm text-on-error-container/80">
+                                    If the structural stack breaches the upper boundary of the matrix, the session is immediately terminated.
+                                </p>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+<!-- Footer Actions -->
+<footer class="p-md border-t border-outline-variant bg-surface-container-lowest flex justify-end items-center">
+<button class="bg-primary text-surface font-label-caps text-label-caps px-xl py-sm rounded border border-primary hover:bg-transparent hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background uppercase tracking-widest flex items-center gap-xs">
+                RESUME SESSION
+                <span class="material-symbols-outlined text-[18px]" data-icon="play_arrow">play_arrow</span>
+</button>
+</footer>
+</main>
+</body></html>
